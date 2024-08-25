@@ -48,7 +48,7 @@ export const gridItems = [
         { name: "JavaScript", icon: "/logo-javascript.svg" },
         { name: "TypeScript", icon: "/ts.svg" },
         { name: "PHP", icon: "/PHP.svg" },
-        { name: "C", icon: "/C.svg" },
+        { name: "C", icon: "/c.svg" },
       ],
       frontend: [
         { name: "HTML5", icon: "/HTML5.svg" },
