@@ -101,8 +101,8 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className="relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.quote.length > 300
-                  ? `${item.quote.substring(0, 300)}...`
+              {item.quote.length > 332
+                  ? `${item.quote.substring(0, 332)}`
                   : item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
