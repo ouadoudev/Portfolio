@@ -68,6 +68,7 @@ export const gridItems = [
         { name: "Redux", icon: "/redux.svg" },
         { name: "Tailwind CSS", icon: "/tail.svg" },
         { name: "Bootstrap", icon: "/Bootstrap.svg" },
+        { name: "Docker", icon: "/dock.svg" },
         { name: "Jest", icon: "/Jest.svg" },
         { name: "Swagger", icon: "/Swagger.svg" },
       ],
@@ -161,7 +162,7 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "I had the pleasure of working alongside Mohamed Ouadou during our internship at Arkx Talent Factory, where we collaborated closely on various web development projects. he consistently demonstrated a deep understanding of modern web technologies and a strong commitment to delivering high-quality code.Their problem-solving skills are outstanding, and they always approach challenges with a positive attitude. Whether it was debugging complex issues or optimizing performance, Mohamed tackled every task with precision and efficiency. Their ability to quickly learn and adapt to new tools and frameworks was particularly impressive, making them a valuable team player.What I admire most about him is their collaborative spirit. They were always willing to lend a hand, share knowledge, and contribute to team success. Their excellent communication skills ensured that our projects ran smoothly and that everyone was on the same page.I have no doubt that he will continue to excel in their career and make significant contributions wherever they go. I highly recommend Mohamed to any team looking for a skilled and dedicated web developer.",
+      "Mohamed tackled every task with precision and efficiency. Their ability to quickly learn and adapt to new tools and frameworks was particularly impressive, making them a valuable team player.What I admire most about him is their collaborative spirit. They were always willing to lend a hand, share knowledge, and contribute to team success. Their excellent communication skills ensured that our projects ran smoothly and that everyone was on the same page.",
     name: "Mohamed Akkaoui",
     avatar:"akkaoui.jpg",
     title: "Full Stack Developer: Former Intern at Arkx",
@@ -172,6 +173,13 @@ export const testimonials = [
     name: "Anas Akil",
     avatar:"akil.jpg",
     title: "Full Stack Developer: Former Intern at Arkx",
+  },
+  {
+    quote:
+      "What sets Mohamed apart is not just his technical prowess, but his collaborative mindset. He’s always willing to share insights, help troubleshoot issues, and contribute meaningfully to team discussions. His strong work ethic and commitment to delivering high-quality results make him an outstanding addition to any team.",
+    name: "Anas Errami",
+    avatar:"errami.png",
+    title: "Engineering Student in Big Data & Cloud Computing",
   },
 ];
 
@@ -196,7 +204,7 @@ export const workExperience = [
     id: 1,
     title: "Full Stack Developer Intern",
     company: "ARK-X Talent Factory",
-    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack, including React.js and Redux for dynamic UIs, Express.js and MongoDB for efficient backend operations, and Socket.io for real-time features. Utilized Docker for scalable deployment and Jest for testing. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
+    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
     duration: "Jan, 10 2024 - Jun, 10 2024",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
@@ -205,7 +213,7 @@ export const workExperience = [
     id: 2,
     title: "Full Stack Developer Intern",
     company: "PRONOV",
-    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities utilizing NestJS for building scalable and maintainable server-side application with a modular architecture,PostgreSQL for robust, reliable, and feature-rich database management, ensuring efficient data storage and retrieval,Drizzle ORM for type-safe database interactions, streamlining query building and data management and React, Redux, and React Query for creating dynamic and responsive user interface with state management and data fetching capabilities. ",
+    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities  ",
     duration: "July 4, 2024 – Present",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
