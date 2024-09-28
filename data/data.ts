@@ -188,13 +188,6 @@ export const testimonials = [
     avatar:"boutayna.jpg",
     title: "Full Stack Developer",
   },
-  {
-    quote:
-      "I highly recommend Mohamed Ouadou as a frontend developer. He has consistently demonstrated strong skills in building responsive, user-friendly interfaces and adapting quickly to new challenges. Their work is detailed, efficient, and they are a great team player. They would be an excellent addition to any frontend development team.",
-    name: "Naïm Abdelkerim",
-    avatar:"naim.png",
-    title: "Software Engineer",
-  }
 ];
 
 export const companies = [
@@ -224,8 +217,8 @@ export const workExperience = [
     id: 1,
     title: "Full Stack Developer Intern",
     company: "ARK-X Talent Factory",
-    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
-    duration: "Jan. 10, 2024 - Jun. 10, 2024",
+    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack, including React.js and Redux for dynamic UIs, Express.js and MongoDB for efficient backend operations, and Socket.io for real-time features. Utilized Docker for scalable deployment and Jest for testing. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
+    duration: "Jan, 10 2024 - Jun, 10 2024",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -233,8 +226,8 @@ export const workExperience = [
     id: 2,
     title: "Full Stack Developer Intern",
     company: "PRONOV",
-    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities  ",
-    duration: "July 4, 2024 – sept 9, 2024",
+    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities utilizing NestJS for building scalable and maintainable server-side application with a modular architecture,PostgreSQL for robust, reliable, and feature-rich database management, ensuring efficient data storage and retrieval,Drizzle ORM for type-safe database interactions, streamlining query building and data management and React, Redux, and React Query for creating dynamic and responsive user interface with state management and data fetching capabilities. ",
+    duration: "July 4, 2024 – Present",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
