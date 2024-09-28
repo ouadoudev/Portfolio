@@ -15,7 +15,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 md:grid-cols-4 gap-4",
+        "grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 md:grid-cols-4 gap-4",
         className
       )}
     >
@@ -27,6 +27,7 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   className,
   id,
+  path,
   title,
   status,
   description,
@@ -43,6 +44,7 @@ export const BentoGridItem = ({
   description?: string | React.ReactNode;
   id: number;
   username?: string;
+  path?: string;
   technologies?: {
     languages?: { name: string; icon: string }[];
     frontend?: { name: string; icon: string }[];
@@ -69,12 +71,18 @@ export const BentoGridItem = ({
     <div
       className={cn(
         "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col justify-center",
-        className
+        className,
+        id === 2 || id === 3 ? "cursor-pointer" : ""
       )}
       style={{
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+      }}
+      onClick={() => {
+        if (id === 2 || id === 3) {
+          window.location.href = path ?? "/";
+        }
       }}
     >
       {image && (
@@ -103,7 +111,7 @@ export const BentoGridItem = ({
       {status && (
         <div
           className={cn(
-            "absolute text-center hidden sm:hidden md:block lg:top-52 lg:right-36  text-xs px-4 py-2 rounded-3xl z-50",
+            "absolute text-center hidden sm:hidden md:block lg:top-44 lg:right-28  text-xs px-4 py-2 rounded-3xl z-50",
             {
               "text-green-500": status === "Seeking New Career Opportunities",
               "text-yellow-500": status === "Currently Employed",

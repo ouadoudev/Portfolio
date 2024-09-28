@@ -27,7 +27,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="py-24 lg:py-0">
+    <div >
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

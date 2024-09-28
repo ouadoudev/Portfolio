@@ -8,29 +8,82 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
-
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showScrollButtons, setShowScrollButtons] = useState(false);
   const leftButtonRef = useRef<HTMLButtonElement>(null);
   const rightButtonRef = useRef<HTMLButtonElement>(null);
 
+  const sections = [
+    { id: "home", component: <Hero /> },
+    { id: "about", component: <Grid /> },
+    { id: "projects", component: <Projects /> },
+    { id: "experience", component: <Experience /> },
+    { id: "testimonials", component: <Testimonials  /> },
+    { id: "contact", component: <Footer  /> },
+  ];
+
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -window.innerWidth,
-        behavior: "smooth",
-      });
+      const currentSection = getCurrentSection();
+      const previousSection = currentSection ? getPreviousSection(currentSection) : null;
+      if (previousSection) {
+        scrollContainerRef.current.scrollBy({
+          left: -window.innerWidth,
+          behavior: "smooth",
+        });
+        updateUrlHash(previousSection as HTMLElement);
+      }
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: window.innerWidth,
-        behavior: "smooth",
-      });
+      const currentSection = getCurrentSection();
+      const nextSection = currentSection ? getNextSection(currentSection) : null;
+      if (nextSection) {
+        scrollContainerRef.current.scrollBy({
+          left: window.innerWidth,
+          behavior: "smooth",
+        });
+        updateUrlHash(nextSection as HTMLElement);
+      }
     }
+  };
+
+  const getCurrentSection = () => {
+    const sections = scrollContainerRef.current ? Array.from(scrollContainerRef.current.children) : [];
+    const currentScrollLeft = scrollContainerRef.current ? scrollContainerRef.current.scrollLeft : 0;
+    let currentSection;
+    sections.forEach((section) => {
+      if ((section as HTMLElement).offsetLeft <= currentScrollLeft && (section as HTMLElement).offsetLeft + (section as HTMLElement).offsetWidth > currentScrollLeft) {
+        currentSection = section;
+      }
+    });
+    return currentSection;
+  };
+
+  const getPreviousSection = (currentSection: HTMLElement | null) => {
+    const sections = scrollContainerRef.current ? Array.from(scrollContainerRef.current.children) : [];
+    const currentIndex = currentSection ? sections.indexOf(currentSection as HTMLElement) : -1;
+    if (currentIndex > 0) {
+      return sections[currentIndex - 1];
+    }
+    return null;
+  };
+
+  const getNextSection = (currentSection: HTMLElement | null) => {
+    const sections = scrollContainerRef.current ? Array.from(scrollContainerRef.current.children) : [];
+    const currentIndex = currentSection ? sections.indexOf(currentSection as HTMLElement) : -1;
+    if (currentIndex < sections.length - 1) {
+      return sections[currentIndex + 1];
+    }
+    return null;
+  };
+
+  const updateUrlHash = (section: HTMLElement) => {
+    const sectionId = section.id;
+    window.location.hash = sectionId;
   };
 
   useEffect(() => {
@@ -39,7 +92,7 @@ export default function Home() {
       if (container) {
         setShowScrollButtons(
           container.scrollLeft > 0 &&
-            container.scrollLeft < container.scrollWidth - container.clientWidth
+            container.scrollLeft <= container.scrollWidth - container.clientWidth
         );
       }
     };
@@ -96,45 +149,24 @@ export default function Home() {
           ref={scrollContainerRef}
           className="flex flex-row w-full h-full overflow-x-scroll snap-x snap-mandatory scroll-smooth"
         >
-          {/* Section 1: Hero */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Hero />
-          </section>
-
-          {/* Section 2: Grid */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Grid />
-          </section>
-
-          {/* Section 3: Projects */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Projects />
-          </section>
-          {/* Section 3: Projects */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Experience />
-          </section>
-
-          {/* Section 4: Testimonials  */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Testimonials  />
-          </section>
-          {/* Section 4: Testimonials  */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
-            <Footer  />
-          </section>
+          {sections.map((section) => (
+            <section
+              key={section.id}
+              id={section.id}
+              className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0"
+            >
+              {section.component}
+            </section>
+          ))}
         </div>
       </main>
 
       {/* Small and medium devices */}
       <main className="relative bg-black-100 flex flex-col justify-center items-center overflow-hidden mx-auto  px-1 lg:hidden">
         <div className="max-w-7xl w-full">
-          <Hero />
-          <Grid />
-          <Projects />
-          <Experience />
-          <Testimonials  />
-          <Footer  />
+          {sections.map((section) => (
+            <section key={section.id}>{section.component}</section>
+          ))}
         </div>
       </main>
     </>

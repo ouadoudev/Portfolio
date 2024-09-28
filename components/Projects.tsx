@@ -5,13 +5,13 @@ import { projects } from "@/data/data";
 const Projects = () => {
   return (
     <div id="projects">
-      <div className="py-14 lg:py-16">
+      <div className=" lg:py-8">
       <h1 className="heading text-center uppercase text-[20px] lg:text-[32px] relative mt-4">
       Delivering Innovative Solutions{"  "}
         <span className="text-purple"> Through Expert Development</span>
       </h1>
-      <div className="overflow-x-auto  px-8">
-        <div className="flex space-x-12">
+      <div className="overflow-x-auto  lg:px-8">
+        <div className="flex space-x-12 lg:gap-4">
           {projects.map((item) => (
             <div
               className="lg:min-h-[30.5rem] h-[28rem] flex items-center justify-center flex-shrink-0"

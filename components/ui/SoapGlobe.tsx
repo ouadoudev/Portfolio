@@ -453,7 +453,7 @@ export function GlobeDemo() {
               Turning Conversations into Opportunities
             </span>
           </h1>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center my-8 lg:my-40">
             <a href="mailto:uoaduomohamed@gmail.com">
               <MagicButton
                 title="Reach Out"

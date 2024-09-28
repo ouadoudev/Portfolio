@@ -15,7 +15,7 @@ export const gridItems = [
     description:
       "I’m a Full Stack Developer with a strong background in electronics, computer science, and automation from Mohammed V University. My passion for continuous learning and adaptability to new technologies drive me to tackle exciting challenges and contribute to innovative projects.",
     educationDetails: [],
-    className: "sm:col-span-12 md:col-span-6 lg:col-span-5 lg:row-span-2 ",
+    className: "col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-4 lg:row-span-2",
     image: "/images.png",
     cvLink: "/Ouadou.mohamed.developpeurFullStack.pdf",
     socialMediaLinks: {
@@ -28,21 +28,20 @@ export const gridItems = [
     id: 2,
     title: "Experience",
     description: "+1 year",
-    className:
-      "sm:col-span-6 md:col-span-4 lg:col-span-2 lg:row-span-1 lg:max-h-[70px] ",
+    className: "col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-1 lg:max-h-[70px]",
+    path:"/#experience"
   },
   {
     id: 3,
     title: "Projects",
     description: "+5 projects",
-    className:
-      "sm:col-span-6 md:col-span-4 lg:col-span-2 lg:row-span-1 lg:max-h-[70px]",
+    className: "col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-1 lg:max-h-[70px]",
+    path:"/#projects"
   },
   {
     id: 4,
     title: "My Tech Stack",
-    className:
-      "sm:col-span-12 md:col-span-6 lg:col-span-3 lg:row-span-2 lg:min-w-[330px] ",
+    className: "col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-4 lg:row-span-2",
     technologies: {
       languages: [
         { name: "JavaScript", icon: "/logo-javascript.svg" },
@@ -77,7 +76,7 @@ export const gridItems = [
   {
     id: 5,
     title: "Formation",
-    className: "sm:col-span-12 md:col-span-6 lg:col-span-4 lg:row-span-1 ",
+    className: "col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-4",
     formation: [
       {
         degree: "Full Stack Web Developer MERN",
@@ -188,6 +187,13 @@ export const testimonials = [
     avatar:"boutayna.jpg",
     title: "Full Stack Developer",
   },
+  {
+    quote:
+      " highly recommend Mohamed Ouadou as a frontend developer. He has consistently demonstrated strong skills in building responsive, user-friendly interfaces and adapting quickly to new challenges. Their work is detailed, efficient, and they are a great team player. They would be an excellent addition to any frontend development team.",
+    name: "Naïm Abdelkerim",
+    avatar:"naim.png",
+    title: "Software Enginner",
+  }
 ];
 
 export const companies = [
@@ -227,7 +233,7 @@ export const workExperience = [
     title: "Full Stack Developer Intern",
     company: "PRONOV",
     description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities utilizing NestJS for building scalable and maintainable server-side application with a modular architecture,PostgreSQL for robust, reliable, and feature-rich database management, ensuring efficient data storage and retrieval,Drizzle ORM for type-safe database interactions, streamlining query building and data management and React, Redux, and React Query for creating dynamic and responsive user interface with state management and data fetching capabilities. ",
-    duration: "July 4, 2024 – Present",
+    duration: "July 4, 2024 – Sept 9, 2024",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -236,7 +242,7 @@ export const workExperience = [
     title: "Full Stack Developer Intern",
     company: "ANEP",
     description: "Developed a comprehensive web-based platform designed to manage and streamline both user and administrator activities within a training management system. The platform includes two distinct environments: one for end-users to interact with and one for administrators to oversee and manage the entire system.",
-    duration: "sept 23, 2024 – Present",
+    duration: "Sept 23, 2024 – Present",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   }

@@ -4,7 +4,6 @@ import { GlobeDemo } from "./ui/SoapGlobe";
 const Footer = () => {
   return (
     <section
-      id="testimonials"
       className="flex flex-col lg:min-h-screen"
     >
       <div>
