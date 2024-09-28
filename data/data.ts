@@ -17,7 +17,7 @@ export const gridItems = [
     educationDetails: [],
     className: "sm:col-span-12 md:col-span-6 lg:col-span-5 lg:row-span-2 ",
     image: "/images.png",
-    cvLink: "/Ouadou.mohamed.developpeurWeb.pdf",
+    cvLink: "/Ouadou.mohamed.developpeurFullStack.pdf",
     socialMediaLinks: {
       linkedin: "https://www.linkedin.com/in/mohamedouadou",
       twitter: "https://twitter.com/",
@@ -68,6 +68,7 @@ export const gridItems = [
         { name: "Redux", icon: "/redux.svg" },
         { name: "Tailwind CSS", icon: "/tail.svg" },
         { name: "Bootstrap", icon: "/Bootstrap.svg" },
+        { name: "Docker", icon: "/dock.svg" },
         { name: "Jest", icon: "/Jest.svg" },
         { name: "Swagger", icon: "/Swagger.svg" },
       ],
@@ -161,18 +162,39 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "I had the pleasure of working alongside Mohamed Ouadou during our internship at Arkx Talent Factory, where we collaborated closely on various web development projects. he consistently demonstrated a deep understanding of modern web technologies and a strong commitment to delivering high-quality code.Their problem-solving skills are outstanding, and they always approach challenges with a positive attitude. Whether it was debugging complex issues or optimizing performance, Mohamed tackled every task with precision and efficiency. Their ability to quickly learn and adapt to new tools and frameworks was particularly impressive, making them a valuable team player.What I admire most about him is their collaborative spirit. They were always willing to lend a hand, share knowledge, and contribute to team success. Their excellent communication skills ensured that our projects ran smoothly and that everyone was on the same page.I have no doubt that he will continue to excel in their career and make significant contributions wherever they go. I highly recommend Mohamed to any team looking for a skilled and dedicated web developer.",
+      "Mohamed tackled every task with precision and efficiency. Their ability to quickly learn and adapt to new tools and frameworks was particularly impressive, making them a valuable team player.What I admire most about him is their collaborative spirit. They were always willing to lend a hand, share knowledge, and contribute to team success. Their excellent communication skills ensured that our projects ran smoothly and that everyone was on the same page.",
     name: "Mohamed Akkaoui",
     avatar:"akkaoui.jpg",
-    title: "Full Stack Developer: Former Intern at Arkx",
+    title: "Full Stack Developer",
   },
   {
     quote:
-      "Je recommande vivement Mohamed ouadou pour une position en développement full-stack. Il est expert des technologies front-end et back-end, et un collaborateur dévoué et communicatif. Il apportera une valeur significative à votre équipe.",
+      "I highly recommend Mohamed ouadou for a position in full-stack development. He's an expert in front-end and back-end technologies, and a dedicated and communicative collaborator. He'll bring significant value to your team.",
     name: "Anas Akil",
     avatar:"akil.jpg",
-    title: "Full Stack Developer: Former Intern at Arkx",
+    title: "Full Stack Developer",
   },
+  {
+    quote:
+      "What sets Mohamed apart is not just his technical prowess, but his collaborative mindset. He’s always willing to share insights, help troubleshoot issues, and contribute meaningfully to team discussions. His strong work ethic and commitment to delivering high-quality results make him an outstanding addition to any team.",
+    name: "Anas Errami",
+    avatar:"errami.png",
+    title: "Engineering Student in Big Data & Cloud Computing",
+  },
+  {
+    quote:
+      "Beyond his technical abilities, Mohamed is distinguished by his professionalism, attention to detail, and collaborative spirit. His eagerness to learn and master new technologies highlights his potential for advanced roles in digital development.I am confident that Mohamed will continue to thrive and make significant contributions in his future endeavors. I recommend him without reservation.",
+    name: "bottayna azmy",
+    avatar:"boutayna.jpg",
+    title: "Full Stack Developer",
+  },
+  {
+    quote:
+      "I highly recommend Mohamed Ouadou as a frontend developer. He has consistently demonstrated strong skills in building responsive, user-friendly interfaces and adapting quickly to new challenges. Their work is detailed, efficient, and they are a great team player. They would be an excellent addition to any frontend development team.",
+    name: "Naïm Abdelkerim",
+    avatar:"naim.png",
+    title: "Software Engineer",
+  }
 ];
 
 export const companies = [
@@ -189,6 +211,12 @@ export const companies = [
     img: "/",
     nameImg: "/okeyo.png",
   },
+  {
+    id: 3,
+    name: "ANEP",
+    img: "/",
+    nameImg: "/anep.png",
+  }
 ];
 
 export const workExperience = [
@@ -196,20 +224,29 @@ export const workExperience = [
     id: 1,
     title: "Full Stack Developer Intern",
     company: "ARK-X Talent Factory",
-    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack, including React.js and Redux for dynamic UIs, Express.js and MongoDB for efficient backend operations, and Socket.io for real-time features. Utilized Docker for scalable deployment and Jest for testing. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
-    duration: "Jan, 10 2024 - Jun, 10 2024",
+    description: "Developed robust web applications using JavaScript, TypeScript, and the MERN stack. Successfully created applications such as a real-time chat app,user management system, temperature display app, and restaurant management systems.",
+    duration: "Jan. 10, 2024 - Jun. 10, 2024",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/exp4.svg",
   },
   {
     id: 2,
     title: "Full Stack Developer Intern",
     company: "PRONOV",
-    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities utilizing NestJS for building scalable and maintainable server-side application with a modular architecture,PostgreSQL for robust, reliable, and feature-rich database management, ensuring efficient data storage and retrieval,Drizzle ORM for type-safe database interactions, streamlining query building and data management and React, Redux, and React Query for creating dynamic and responsive user interface with state management and data fetching capabilities. ",
-    duration: "July 4, 2024 – Present",
+    description: "Contributed to the enhancement of the OKEYO application by implementing new features and functionalities  ",
+    duration: "July 4, 2024 – sept 9, 2024",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
+  {
+    id: 3,
+    title: "Full Stack Developer Intern",
+    company: "ANEP",
+    description: "Developed a comprehensive web-based platform designed to manage and streamline both user and administrator activities within a training management system. The platform includes two distinct environments: one for end-users to interact with and one for administrators to oversee and manage the entire system.",
+    duration: "sept 23, 2024 – Present",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  }
 ];
 
 export const socialMedia = [
