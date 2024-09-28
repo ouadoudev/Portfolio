@@ -102,7 +102,7 @@ export const InfiniteMovingCards = ({
               ></div>
               <span className="relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
                 {item.quote.length > 332
-                  ? `${item.quote.substring(0, 332)}...`
+                  ? `${item.quote.substring(0, 332)}`
                   : item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
