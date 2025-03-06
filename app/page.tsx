@@ -7,6 +7,9 @@ import Testimonials  from "@/components/Testimonials";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 
 export default function Home() {
@@ -14,6 +17,7 @@ export default function Home() {
   const [showScrollButtons, setShowScrollButtons] = useState(false);
   const leftButtonRef = useRef<HTMLButtonElement>(null);
   const rightButtonRef = useRef<HTMLButtonElement>(null);
+  const { setTheme, theme } = useTheme()
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -69,6 +73,15 @@ export default function Home() {
 
   return (
     <>
+          <Button
+        variant="outline"
+        size="icon"
+        className="fixed top-4 right-4 z-50 rounded-full"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        {theme === "dark" ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+      </Button>
       {/* Large screens and above */}
       <main className="relative bg-black-100  lg:flex-row flex-col justify-between items-center overflow-hidden mx-auto w-screen h-screen hidden lg:flex">
         {/* Scroll buttons for large screens and above */}
