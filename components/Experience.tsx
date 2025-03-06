@@ -7,8 +7,8 @@ import { InfiniteMovingIcons } from "./ui/infinite-moving-icons";
 
 const Experience = () => {
   return (
-    <div className="py-4 lg:py-0">
-      <LampContainer className="pb-4 pt-36 lg:py-44 ">
+    <section id="experience">
+      <LampContainer className="pb-4 pt-36  ">
     <h1 className="heading text-center uppercase text-[20px] lg:text-[32px] relative mt-5 lg:mt-4 ">
     A Glimpse into My{" "}
       <span className="text-purple"> Professional Background</span>
@@ -22,17 +22,17 @@ const Experience = () => {
     direction="left"
     speed="fast"
     pauseOnHover={false}
-     className="w-32 lg:w-96"
+     className="w-28 lg:w-96"
   />
 ) : (
-  <div className="flex flex-wrap items-center justify-center gap-4 relative">
+  <div className="flex flex-wrap items-center justify-center gap-2 relative">
     {companies.map((company) => (
       <React.Fragment key={company.id}>
-        <div className="flex max-w-32 gap-2">
+        <div className="flex max-w-32 ">
           <img
             src={company.nameImg}
             alt={company.name}
-            className="w-32 lg:w-full"
+            className="w-28 lg:w-full"
           />
         </div>
       </React.Fragment>
@@ -40,7 +40,7 @@ const Experience = () => {
   </div>
 )}
 
-      <div className="w-full mt-1 grid lg:grid-cols-4 grid-cols-1 gap-10 ">
+      <div className="w-full mt-4 grid lg:grid-cols-4 grid-cols-1 gap-10 ">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -75,7 +75,7 @@ const Experience = () => {
         ))}
       </div>
       </LampContainer>
-    </div>
+    </section>
   );
 };
 

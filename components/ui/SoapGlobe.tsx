@@ -400,13 +400,13 @@ export function GlobeDemo() {
 
   return (
     <div className="flex items-center justify-center  w-full h-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 lg:h-[52rem]  px-4 ">
-        <div className="absolute w-full h-80 lg:h-[38rem]">
+      <div className="max-w-full mx-auto w-full relative overflow-hidden h-96 lg:h-[52rem]  ">
+        <div className="absolute w-full h-80 lg:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-        <div className="absolute w-full bottom-0 lg:bottom-52 inset-x-0 h-48 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full bottom-0 lg:bottom-24 inset-x-0 h-48 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
 
-        <div className="absolute w-full bottom-0 lg:bottom-52 flex justify-center z-40 ">
+        <div className="absolute w-full bottom-0 lg:bottom-24 flex justify-center z-40 ">
           <div className="flex lg:gap-2 ">
             <p className="text-xs mt-2 w-52 lg:mt-6 lg:w-full lg:text-sm lg:mr-56 text-center">
               Copyright 2024{" "}
@@ -453,7 +453,7 @@ export function GlobeDemo() {
               Turning Conversations into Opportunities
             </span>
           </h1>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center my-8 lg:my-40">
             <a href="mailto:uoaduomohamed@gmail.com">
               <MagicButton
                 title="Reach Out"

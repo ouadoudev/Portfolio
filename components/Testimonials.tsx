@@ -5,12 +5,12 @@ import { testimonials } from '@/data/data';
 const Testimonials = () => {
   return (
     <section id="testimonials" >
-<div className="py-4 lg:py-20">
+<div className="lg:py-8 ">
       <h1 className="heading text-center text-[20px] lg:text-[32px] font-bold uppercase  mb-8 relative">
       Endorsements: {"  "}
       <span className="text-purple">  Voices of Satisfaction and Success</span>
       </h1>
-      <div className="overflow-x-auto py-10">
+      <div className="overflow-x-auto py-10 lg:py-28 lg:mx-96">
         <InfiniteMovingCards
           items={testimonials}
           direction="right"

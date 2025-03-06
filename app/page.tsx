@@ -39,7 +39,7 @@ export default function Home() {
       if (container) {
         setShowScrollButtons(
           container.scrollLeft > 0 &&
-            container.scrollLeft < container.scrollWidth - container.clientWidth
+            container.scrollLeft <= container.scrollWidth - container.clientWidth
         );
       }
     };
@@ -97,12 +97,12 @@ export default function Home() {
           className="flex flex-row w-full h-full overflow-x-scroll snap-x snap-mandatory scroll-smooth"
         >
           {/* Section 1: Hero */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
+          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0 lg:py-24">
             <Hero />
           </section>
 
           {/* Section 2: Grid */}
-          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0">
+          <section className="flex-shrink-0 w-full h-full snap-center mb-6 lg:mb-0 lg:py-20">
             <Grid />
           </section>
 
